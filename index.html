@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Caden Clawson</title>
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals, Caden Clawson, Homepage">
+    <meta name="author" content="Caden Clawson">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span id="course-title">WDD 131 Dynamic Web Fundamentals</span>
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
+                <li><a href="#" target="_blank">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Caden Clawson</h1>
+    
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <p>
+                    My name is Caden and I live in West Valley City. I am currently Engaged and will be married at the begining of next year.
+                    I love to collect Legos and to play frisbee golf. This is my personal homepage for WDD 131.
+                </p>
+                <img src="images/profile.webp" alt="Photo of Caden Clawson" width="200">
+            </div>
+        </section>
+    
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="#" target="_blank">Image Placeholder</a></li>
+            </ul>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Your Name | Your State or Country
+        </p>
+        <p id="lastModified"></p>
+    </footer>    
+    
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+    
+        document.getElementById("lastModified").textContent = 
+            "Last Modification: " + document.lastModified;
+    </script>
+    
+</body>
+</html>
