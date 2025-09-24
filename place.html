@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United States</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>United States</h1>
+  </header>
+
+  <div class="hero-container">
+    <picture>
+      <source srcset="images/rushmore.jpg" media="(min-width: 768px)">
+      <img src="images/rushmore.jpg" alt="United States Landscape" class="hero">
+    </picture>
+
+    <main>
+      <section class="data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 9,833,520 sq km</li>
+          <li><strong>Population:</strong> 331,900,000</li>
+          <li><strong>Capital:</strong> Washington, D.C.</li>
+          <li><strong>Languages:</strong> English (de facto)</li>
+          <li><strong>Currency:</strong> U.S. Dollar (USD)</li>
+          <li><strong>Time Zones:</strong> UTC-5 to UTC-10 (varies)</li>
+          <li><strong>Calling Code:</strong> +1</li>
+          <li><strong>Internet TLD:</strong> .us</li>
+        </ul>
+      </section>
+
+      <section class="weather">
+        <h2>Weather</h2>
+        <class="weather-icon">
+        <ul>
+          <li><strong>Temperature:</strong> <span id="temp">59</span> °F</li>
+          <li><strong>Conditions:</strong> Sunny</li>
+          <li><strong>Wind:</strong> <span id="wind">10</span> km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy;<span id="year"></span> 🇺🇸 United States Webpage Project</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

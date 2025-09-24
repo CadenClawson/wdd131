@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #b22234;  
+    --secondary-color: #3c3b6e;
+    --text-color: #333;
+    --bg-color: #fff;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/rushmore.jpg') no-repeat center center/cover;
+  }
+  
+  .card {
+    position: absolute;
+    top: 50%;      
+    left: 50%;     
+    transform: translate(-50%, -50%); 
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .hero-container {
+    position: relative;
+  }
+  
+  .card-left {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .card-right {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .hero {
+    width: 100%;
+    display: block;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+    position: absolute;
+    top: 65%; 
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+  }
+  
+  .data, .weather {
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  
+  .data h2, .weather h2 {
+    color: var(--secondary-color);
+  }
+  
+  .weather h2::after {
+    content: " ⛅";
+  }
+  
+  .weather-icon {
+    width: 50px;
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  .data {
+    justify-self: start;
+  }
+  .weather {
+    justify-self: end;
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      position: static;
+      transform: none;
+      display: block;
+      padding: 1rem;
+    }
+  
+    .data, .weather {
+      margin-bottom: 1rem;
+    }
+  }
+  
