@@ -1,0 +1,87 @@
+@media screen and (min-width: 768px) {
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem; 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    main > h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    figure {
+        margin: 0;
+        text-align: center;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    figcaption {
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+    figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        background: white;
+      }
+      
+      figure img {
+        width: 100%;
+        height: 220px; 
+        object-fit: cover;
+      }
+      
+      figcaption {
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+      }
+}
+
+  
+  
