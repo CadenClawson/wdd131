@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <label for="product">Product Name:</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <label><input type="radio" id="rating1" name="rating" value="1" required> ☆</label>
+        <label><input type="radio" id="rating2" name="rating" value="2"> ☆☆</label>
+        <label><input type="radio" id="rating3" name="rating" value="3"> ☆☆☆</label>
+        <label><input type="radio" id="rating4" name="rating" value="4"> ☆☆☆☆</label>
+        <label><input type="radio" id="rating5" name="rating" value="5"> ☆☆☆☆☆</label>
+      </fieldset>
+
+      <label for="install-date">Date of Installation:</label>
+      <input type="date" id="install-date" name="installDate" required>
+
+      <fieldset>
+        <legend>Useful Features (check all that apply):</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="durable"> Durable</label>
+        <label><input type="checkbox" id="feature2" name="features" value="easy"> Easy to Use</label>
+        <label><input type="checkbox" id="feature3" name="features" value="portable"> Portable</label>
+        <label><input type="checkbox" id="feature4" name="features" value="eco"> Eco-Friendly</label>
+      </fieldset>
+
+      <label for="review">Written Review:</label>
+      <textarea id="review" name="review" rows="5"></textarea>
+
+      <label for="username">Your Name:</label>
+      <input type="text" id="username" name="username">
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Product Reviews Inc.</p>
+  </footer>
+</body>
+</html>
