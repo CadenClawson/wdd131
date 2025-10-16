@@ -1,0 +1,528 @@
+/* ===== Root Variables ===== */
+:root {
+  --primary: #2e7d32;   /* Dark Green */
+  --accent: #1565c0;    /* Blue */
+  --bg: #f4f9f4;
+  --text: #222;
+  --text-light: #fff;
+  --max-width: 1100px;
+}
+
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===== Header & Navigation ===== */
+.site-header {
+  background: var(--accent);
+  color: var(--text-light);
+  text-align: center;
+  padding: 25px 0 20px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+/* Center and stack everything */
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  color: var(--text-light);
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: #ffeb3b;
+}
+
+/* --- Button-Style Navigation Links --- */
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list a {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background: #ffeb3b;
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(55%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+}
+
+/* Call-to-action button */
+.cta-button,
+.hero-button {
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover,
+.hero-button:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .nav-list {
+    gap: 10px;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
+    padding: 8px 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  background-image: url('../images/hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 50px; /* ensures text doesn't crowd nav */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .logo { font-size: 1.7rem; }
+  .nav-links a { font-size: 1rem; padding: 8px 15px; }
+  .hero-text h1 { font-size: 2.2rem; }
+}
+
+/* --- Hover underline effect --- */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffeb3b;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+/* --- Subtle hover underline animation --- */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #ffeb3b;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+/* ===== Mobile Styling ===== */
+@media (max-width: 768px) {
+  .main-nav {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(55%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button,
+.hero-button {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.cta-button:hover,
+.hero-button:hover {
+  background: #1b5e20;
+}
+
+/* ===== Sections ===== */
+main {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 { color: var(--accent); margin-bottom: 10px; }
+h2 { color: var(--primary); margin-top: 20px; }
+
+/* ===== Features Section ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: var(--max-width);
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  color: var(--accent);
+  margin: 15px 0 10px;
+}
+
+.feature-link {
+  text-decoration: none;
+  color: white;
+  background: var(--accent);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.feature-link:hover {
+  background: var(--primary);
+}
+
+/* ===== Course Page ===== */
+.course-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 30px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.course-card:hover { transform: translateY(-5px); }
+
+.course-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.course-link {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--primary);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.course-link:hover { background: #388e3c; }
+
+/* ===== Gear Page ===== */
+.disc-section,
+.flight-section,
+.tips-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* ===== Flight Animation ===== */
+.flight-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.flight-svg {
+  width: 100%;
+  height: auto;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-path {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: drawPath 2.5s ease-in-out forwards;
+}
+
+.driver-path { stroke: #1565c0; }
+.midrange-path { stroke: #43a047; }
+.putter-path { stroke: #8bc34a; }
+
+@keyframes drawPath {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--accent);
+  color: var(--text-light);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav { flex-direction: column; gap: 1rem; }
+  .hero-text h1 { font-size: 2rem; }
+  .disc-type { flex-direction: column; text-align: center; }
+  .course-card img { height: 160px; }
+}

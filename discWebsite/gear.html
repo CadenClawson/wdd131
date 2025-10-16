@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disc Golf Gear & Flight Paths</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html">Disc Golf Central</a></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a class="active" href="gear.html">Gear</a></li>
+          <li><a href="tips.html">Tips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Disc Types & Flight Paths</h1>
+    <p>Choosing the right disc makes all the difference in your game. Learn the main disc types and how each one flies.</p>
+
+    <section class="disc-section">
+      <h2>Disc Types</h2>
+
+      <div class="disc-type">
+        <img src="images/driver.webp" alt="Driver disc image" loading="lazy">
+        <div class="disc-info">
+          <h3>Drivers</h3>
+          <p>Designed for maximum distance. Drivers have sharper rims and higher speeds. Best used off the tee for long throws.</p>
+        </div>
+      </div>
+
+      <div class="disc-type">
+        <img src="images/midrange.webp" alt="Midrange disc example" loading="lazy">
+        <div class="disc-info">
+          <h3>Midrange Discs</h3>
+        <p>Balanced between distance and control. Midranges are great for approach shots or when accuracy matters more than distance.</p>
+        </div>
+      </div>
+
+      <div class="disc-type">
+        <img src="images/putter.webp" alt="Putter disc example" loading="lazy">
+        <div class="disc-info">
+          <h3>Putters</h3>
+          <p>Straight-flying discs for short throws and putting. They offer more glide and control for precision near the basket.</p>
+          </div>
+      </div>
+
+    <section class="flight-section">
+      <h2>Projected Flight Paths</h2>
+      <p>Each disc type has a unique flight pattern determined by its speed, glide, turn, and fade. These visuals show typical flight paths for each disc type:</p>
+        <div class="flight-chart">
+          <div class="flight-diagram">
+            <svg viewBox="0 0 1000 200" class="flight-svg driver-svg">
+              <path d="M50 180 Q500 20 950 120" class="flight-path driver-path" id="driverPath"></path>
+              <circle class="disc-icon driver-disc" r="10" fill="#1565c0"></circle>
+            </svg>
+            <span class="flight-label">Driver – Long, Curving Finish</span>
+          </div>
+      
+          <div class="flight-diagram">
+            <svg viewBox="0 0 1000 200" class="flight-svg midrange-svg">
+              <path d="M50 160 Q500 80 950 150" class="flight-path midrange-path" id="midrangePath"></path>
+              <circle class="disc-icon midrange-disc" r="10" fill="#43a047"></circle>
+            </svg>
+            <span class="flight-label">Midrange – Smooth, Controlled Arc</span>
+          </div>
+      
+          <div class="flight-diagram">
+            <svg viewBox="0 0 1000 200" class="flight-svg putter-svg">
+              <path d="M50 140 Q500 120 950 140" class="flight-path putter-path" id="putterPath"></path>
+              <circle class="disc-icon putter-disc" r="10" fill="#8bc34a"></circle>
+            </svg>
+            <span class="flight-label">Putter – Straight and Slow Glide</span>
+          </div>
+        </div>
+      </section>
+      
+  </main>
+
+  <footer>
+    <p>© 2025 Disc Golf Central | <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
